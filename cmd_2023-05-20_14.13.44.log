@@ -1,0 +1,43 @@
+   457.9ms (setup:799): 2023-05-20 14:13:44
+   458.1ms (setup:800): /home/rer/.local/bin/pipx install semantra
+   458.1ms (setup:801): pipx version is 1.2.0
+   458.2ms (setup:802): Default python interpreter is '/usr/bin/python3'
+   458.8ms (package_name_from_spec:322): Determined package name: semantra
+   458.9ms (package_name_from_spec:323): Package name determined in 0.0s
+   459.5ms (run_subprocess:173): running /usr/bin/python3 -m venv --without-pip /home/rer/.local/pipx/venvs/semantra
+   547.2ms (run_subprocess:186): stdout:
+   547.3ms (run_subprocess:188): stderr:
+   547.4ms (run_subprocess:189): returncode: 0
+   547.6ms (run_subprocess:173): running /home/rer/.local/pipx/venvs/semantra/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+   562.0ms (run_subprocess:186): stdout: /home/rer/.local/pipx/venvs/semantra/lib/python3.11/site-packages
+   562.0ms (run_subprocess:189): returncode: 0
+   562.2ms (run_subprocess:173): running /home/rer/.local/pipx/shared/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+   578.0ms (run_subprocess:186): stdout: /home/rer/.local/pipx/shared/lib/python3.11/site-packages
+   578.0ms (run_subprocess:189): returncode: 0
+   578.3ms (run_subprocess:173): running /home/rer/.local/pipx/venvs/semantra/bin/python --version
+   581.3ms (run_subprocess:186): stdout: Python 3.11.3
+   581.4ms (run_subprocess:188): stderr:
+   581.4ms (run_subprocess:189): returncode: 0
+   582.1ms (_parsed_package_to_package_or_url:147): cleaned package spec: semantra
+   582.5ms (run_subprocess:173): running /home/rer/.local/pipx/venvs/semantra/bin/python -m pip install semantra
+ 49624.6ms (run_subprocess:189): returncode: 1
+ 49624.9ms (subprocess_post_check_handle_pip_error:335): '/home/rer/.local/pipx/venvs/semantra/bin/python -m pip install semantra' failed
+ 49625.3ms (subprocess_post_check_handle_pip_error:352): Fatal error from pip prevented installation. Full pip output in file:
+    /home/rer/.local/pipx/logs/cmd_2023-05-20_14.13.44_pip_errors.log
+ 49627.1ms (analyze_pip_output:298): pip failed to build package:
+    annoy-fixed
+ 49627.4ms (rmdir:55): removing directory /home/rer/.local/pipx/venvs/semantra
+ 49628.5ms (cli:866): PipxError: Error installing semantra.
+Traceback (most recent call last):
+  File "/home/rer/.local/lib/python3.11/site-packages/pipx/main.py", line 863, in cli
+    return run_pipx_command(parsed_pipx_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rer/.local/lib/python3.11/site-packages/pipx/main.py", line 214, in run_pipx_command
+    return commands.install(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/rer/.local/lib/python3.11/site-packages/pipx/commands/install.py", line 60, in install
+    venv.install_package(
+  File "/home/rer/.local/lib/python3.11/site-packages/pipx/venv.py", line 253, in install_package
+    raise PipxError(
+pipx.util.PipxError: Error installing semantra.
+ 49752.9ms (cli:874): pipx finished.
